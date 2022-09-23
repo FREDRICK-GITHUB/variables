@@ -1,7 +1,13 @@
 fn main() {
-   let x = 2.0;
+   let sum = 5 + 10;
+   
+   let difference = 95.5 - 4.3;
 
-   let y: f32 = 3.0;
+   let product = 4 * 30;
 
-   println!("The two numbers added here are x:{} and y:{}", x,y);
+   let quotient = 56.7 / 32.2;
+
+   let remainder = 43 % 5;
+
+   println!("sum: {} difference: {} product: {} quotient: {} remainder: {}", sum, difference, product, quotient, remainder);
 }

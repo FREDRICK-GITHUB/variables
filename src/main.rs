@@ -1,24 +1,14 @@
 fn main() {
-   let sum = 5 + 10;
-   
-   let difference = 95.5 - 4.3;
+   let tup: (i32, f64, u8) = (500, 6.4, 1);
 
-   let product = 4 * 30;
+   let (x, y, z) = tup; //destructuring a tuple to get individual tuple values
 
-   let quotient = 56.7 / 32.2;
+   //alternative way of destructuring a tuple using indexes
+   let five_hundred = tup.0;
+   let six_point_four = tup.1;
+   let one = tup.2;
 
-   let remainder = 43 % 5;
+   println!("The values of x, y, z  are: {}, {}, {}", x, y, z);
 
-   println!("sum: {} difference: {} product: {} quotient: {} remainder: {}", sum, difference, product, quotient, remainder);
-
-   let t = true;
-   let f: bool = false;
-
-   println!("the bolean is: {} and explicitly declared boolean is: {}",t, f);
-
-   let c = 'z';
-   let z = 'Z';
-   let heart_eyed_cat = '😻';
-
-   println!("characters are declared with a single quote in Rust. c: {}, z: {}, heart_eyed_cat: {}", c, z, heart_eyed_cat);
+   println!("The same values accessed using the indexes are: {}, {}, {}", five_hundred, six_point_four, one);
 }

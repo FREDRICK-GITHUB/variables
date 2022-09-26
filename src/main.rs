@@ -1,14 +1,13 @@
 fn main() {
-   let tup: (i32, f64, u8) = (500, 6.4, 1);
+  //Arrays in rust must have a fixed length, once declared, they cannot be modified either way
 
-   let (x, y, z) = tup; //destructuring a tuple to get individual tuple values
+  // they are useful when one wants the data to be allocated to a stack rather than heap
+  //also used to ensure that one always has a fixed number of elements
+  // the alternative where one can grow or shrink the size is to use VECTORS
 
-   //alternative way of destructuring a tuple using indexes
-   let five_hundred = tup.0;
-   let six_point_four = tup.1;
-   let one = tup.2;
+  let a = [1,2,3,4,5];
+  let index_one = a[1];
 
-   println!("The values of x, y, z  are: {}, {}, {}", x, y, z);
-
-   println!("The same values accessed using the indexes are: {}, {}, {}", five_hundred, six_point_four, one);
+  println!("The length of the array is: {}", a.len());
+  println!("The value at index one in the array is: {} ", index_one);
 }

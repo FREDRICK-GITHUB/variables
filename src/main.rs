@@ -1,13 +1,23 @@
 fn main() {
-  //Arrays in rust must have a fixed length, once declared, they cannot be modified either way
+   println!("Welcome to the functions example!");
+  /*
+  Functions, just like variables in Rust, they are declared using the camel case
+  Rust doesn't care whether the function is declared before or after the main function
+  May or may not have parameters/arguments
+  In function signatures, all the parameters must have their types declared
 
-  // they are useful when one wants the data to be allocated to a stack rather than heap
-  //also used to ensure that one always has a fixed number of elements
-  // the alternative where one can grow or shrink the size is to use VECTORS
+  Statements do not return any values
+  Expressions do return values e.g x+1 is an expression to do some addition
+  */
+  let z = five();
+  let x = plus_one(5);
+  println!("The value of x is: {}",x);
+}
 
-  let a = [1,2,3,4,5];
-  let index_one = a[1];
+fn five ()-> i32 { //this function is supposed to return a value of type i32
+   5
+}
 
-  println!("The length of the array is: {}", a.len());
-  println!("The value at index one in the array is: {} ", index_one);
+fn plus_one(x: i32) -> i32 { //this function is supposed to return a value of type i32 and it has a parameter of type i32 as well
+  x+1
 }
